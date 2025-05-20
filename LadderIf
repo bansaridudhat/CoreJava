@@ -1,0 +1,54 @@
+package basicJava;
+import java.util.Scanner;
+
+public class LadderIf {
+
+	public static void main(String[] args) {
+	int rno,s1,s2,s3,total;
+	String sname;
+	double per;
+	try (Scanner sc = new Scanner(System.in)) {
+		
+		System.out.println("Enter student Name :");
+		sname=sc.next();
+		System.out.println("Enter student Rollno :");
+		rno=sc.nextInt();
+		System.out.println("Enter Mark of Subject 1 :");
+		s1=sc.nextInt();
+		System.out.println("Enter Mark of Subject 2 :");
+		s2=sc.nextInt();
+		System.out.println("Enter Mark of Subject 3 :");
+		s3=sc.nextInt();
+		
+		total=s1+s2+s3;
+		per=total/3;
+				
+		System.out.println("Student Name :"+sname);
+		System.out.println("Roll no :"+rno);
+		System.out.println("Total : "+total);
+		System.out.println("Percentage :"+per);
+		
+		if(per>70)
+		{
+			System.out.println("Distiction");
+		}
+		else if(per>=60)
+		{
+			System.out.println("First class");
+		}
+		else if(per>=50)
+		{
+			System.out.println("second class ");
+		}
+		else if(per>=40)
+		{
+			System.out.println("Pass Class");
+		}
+		else 
+		{
+			System.out.println("Fail");
+		}
+	
+	}
+	}
+}
