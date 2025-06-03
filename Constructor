@@ -1,0 +1,63 @@
+/*
+ * 
+ * Constructor
+ * 
+ *  - It is Special member function whose take is to initialize the object of it's class.
+ *  
+ *  Characteristics 
+ *  
+ *  1. They have the same name as the class  name.
+ *  2. They do not have any return types.
+ *  3. They are invoked automatically when the objects are created.
+ *  
+ *   Types
+ *   
+ *   1. Default Constructor(The constructor which have no arguments)
+ *   2. Parameterized Constructor(The constructor which have same arguments)
+ *   3. Copy constructor (The contructor which have object as arguments)
+ *  
+ */
+
+
+package basicJava;
+
+class Box
+{
+	double width,height,depth;
+	Box()
+	{
+		System.out.println("Default Constructor called ");
+	}
+	Box(double w,double h,double d)
+	{
+		System.out.println("Parameterized Constructor called");
+		width=w;
+		height=h;
+		depth=d;
+	}
+	Box(Box b)
+	{
+		System.out.println("Copy Contructor called ");
+		width=b.width;
+		height=b.height;
+		depth=b.depth;
+	}
+	void volume()
+	{
+		System.out.println("Volume is :"+(width*height*depth));
+	}
+}
+public class ConstructorDemo {
+public static void main(String[] args) {
+	
+
+	Box b1=new Box();
+	
+	Box b2=new Box(10,10,10);
+	b2.volume();
+	
+	Box b3=new Box(b2);
+	b3.volume();
+	
+}	
+}
