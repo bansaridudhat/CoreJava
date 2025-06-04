@@ -1,0 +1,25 @@
+package basicJava;
+
+import java.security.DomainCombiner;
+
+public class StaticMethod {
+static int a=10;
+static int b;
+static void math(int x)
+{
+	System.out.println("Math Method called..");
+	System.out.println("x :"+x);
+	System.out.println("A :"+a);
+	System.out.println("B :"+b);
+}
+static 
+{
+	System.out.println("Static block initialized");
+	b=a*4;
+}
+public static void main(String[] args) {
+	System.out.println("Main method called..");
+	math(12);
+	
+}
+}
